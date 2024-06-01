@@ -1,0 +1,33 @@
+<!--入力ホーム　テンプレートinput.html-->
+<!--localhost:8080/output-->
+
+<!--①送信」ボタンをクリックすると、入力フォームの値をPOSTメソッドでoutputに送信する-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--★-->
+
+<head>
+	<meta charset="UTF-8">
+	<title>Thymeleaf課題</title>
+</head>
+
+<body>
+	<h1>Thymeleaf課題</h1>
+	<h2>入力画面</h2>
+	<p>値を入力してください。</p>
+
+	<p th:if="${param.previous} neq null"　th:text="'前回入力された値は「'+${param.previous}+'」でした。'"></p><!--パラメータから引っ張ってくる、条件分岐（th:if / th:unless）でtrueのときに表示-->
+	<!--<p th:if="${param.previous} neq null"　 演算子nullのときに表示させない-->
+	<!--①送信」ボタンをクリックすると、入力フォームの値をPOSTメソッドでoutputに送信する-->
+	<!--<form method="post" action="/confirm">でフォームの定義をしています。送信方法は「POSTメソッド」で、送信先URLは「/confirm」としています。-->
+	<form method="post" action="/Output">
+		<input type="text" name="val">
+		<button type="submit">送信</button>
+	</form>
+
+	</tabel>
+		<!--Thymeleafではクエリパラメータを取得するための変数paramがあらかじめ用意されています-->
+
+</body>
+
+</html>

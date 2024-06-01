@@ -1,0 +1,21 @@
+<!--入力した値の表示用のテンプレート-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+           <title>Thymeleaf課題</title>
+    </head>
+    <body>
+    	<h1>Thymeleaf課題</h1>
+    	<h2>入力画面</h2>
+    	<p>入力された値は「あいうえお」です。</p>
+    	<!--「入力画面へ戻る」リンクをクリックすると、/inputに遷移する。その際、入力画面から受け取った値をパラメータpreviousで渡す-->
+
+		<p><a th:href="@{/input(previous=${previous})}">入力画面へ戻る</a></p><!--★previous記述　URL演算子-->
+
+
+		<!--※戻る画面遷移、今回リンクパラメーターが「previousなので変数をcontrollerに格納する-->
+		<!--${param.id[0]}によりクエリパラメータに指定された1番目のidの値を取得-->
+
+</body>
+</html>
