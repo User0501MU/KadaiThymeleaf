@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 		//@GetMapping("/") アノテーションは、URL http://localhost:8080/（「/」のアドレス）に対する「GETメソッド」を受け取る関数であることを示します。
 		public String getInput(@RequestParam("val")String val,Model model) {
 			model.addAttribute("previous",val);//val任意
-	        // inputpit.htmlに画面遷移
+	        // outpit.htmlに画面遷移
 	        return "Output";
 	    }
 
